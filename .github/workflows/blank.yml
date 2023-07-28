@@ -1,6 +1,6 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+on: [push, pull_request]
 jobs:
   check-bats-version:
     # runs-on: ubuntu-latest
@@ -20,14 +20,12 @@ jobs:
       - run: ls ../../../
       - run: echo "this is a test" > ./ci_gen1.txt
 
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+jobs:
   test_schedule:
     runs-on: self-hosted
-    on:
-      [
-        push,
-        schedule:
-          - cron: "*/5 * * * *"
-      ]
     steps:
       - uses: actions/checkout@v3
       - run: echo "test ci scheduler"
