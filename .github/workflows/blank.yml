@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '2/5 * * * *'
+    - cron: '0/5 * * * *'
 
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
 
 
   test_schedule:
-    if: github.event_name == 'schedule'
+    if: github.event_name != 'push'
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
