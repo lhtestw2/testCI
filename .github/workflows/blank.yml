@@ -19,3 +19,15 @@ jobs:
       - run: ls ../../
       - run: ls ../../../
       - run: echo "this is a test" > ./ci_gen1.txt
+
+  test_schedule:
+    runs-on: self-hosted
+    on:
+      [
+        push,
+        schedule:
+          - cron: "*/5 * * * *"
+      ]
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "test ci scheduler"
