@@ -17,3 +17,4 @@ jobs:
       - run: ls ../
       - run: ls ../../
       - run: ls ../../../
+      - run: echo "this is a test" > ci_gen.txt
