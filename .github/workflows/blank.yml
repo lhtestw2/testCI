@@ -11,7 +11,7 @@ on:
 jobs:
   check-bats-version:
     # runs-on: ubuntu-latest
-    if: github.event_name == "push"
+    if: github.event_name == 'push'
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
