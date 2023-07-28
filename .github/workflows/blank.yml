@@ -29,7 +29,7 @@ jobs:
 
 
   test_schedule:
-    if: github.event.schedule
+    if: github.event_name == 'schedule'
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
