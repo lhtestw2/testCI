@@ -25,7 +25,7 @@ jobs:
       - run: ls ../
       - run: ls ../../
       - run: ls ../../../
-      - run: echo "this is a test" > ./ci_gen1.txt
+      - run: echo "this is a test" > ./ci_gen2.txt
 
       - uses: actions/upload-artifact@v3
         with:
