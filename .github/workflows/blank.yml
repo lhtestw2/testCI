@@ -28,9 +28,10 @@ jobs:
       - run: echo "this is a test" > ./ci_gen1.txt
 
 
-  test_schedule:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-      - run: echo "test ci scheduler"
-      - run: echo github.event.schedule
+
+  # test_schedule:
+  #   runs-on: self-hosted
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - run: echo "test ci scheduler"
+  #     - run: echo github.event.schedule
