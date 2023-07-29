@@ -10,7 +10,7 @@ on:
 jobs:
   check-bats-version:
     # runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    # if: github.event_name == 'push'
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: ./ci_gen1.txt
+          path: ./ci_gen2.txt
 
 
 
