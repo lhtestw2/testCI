@@ -3,8 +3,8 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: 
   push:
   pull_request:
-  schedule:
-    - cron: '10/20 * * * *'
+  # schedule:
+  #   - cron: '10/20 * * * *'
 
 
 jobs:
@@ -28,9 +28,7 @@ jobs:
       - run: echo "this is a test" > ./ci_gen2.txt
 
       - uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: ./ci_gen2.txt
+
 
 
 
